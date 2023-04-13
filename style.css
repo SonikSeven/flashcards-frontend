@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("world.png") no-repeat;
+    background-position-x: center;
+    background-position-y: 10%;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    font-family: "PT Root UI", sans-serif;
+}
+
+h1 {
+    color: #2F4F4F;
+    font-size: 3.5vmin;
+    text-align: center;
+}
+
+main {
+    width: 60vmin;
+    height: 60vmin;
+}
+
+#flex-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    flex: none;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.flex-item {
+    width: 32%;
+    height: 32%;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    font-size: 3vmin;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: 2s;
+}
+
+.front, .back {
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.front {
+    background: #F9EFE5;
+    color: #FF7C02;
+}
+
+.back {
+    background: #FF7C02;
+    color: #F9EFE5;
+    transform: rotateY(180deg);
+}
+
+.flex-item:hover .card {
+    transform: rotateY(180deg);
+}
+
+.flex-item {
+    perspective: 1000px;
+}
